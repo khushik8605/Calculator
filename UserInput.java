@@ -37,4 +37,10 @@ private void performBasicOperation(int choice, double a, double b, Calculator ca
     }
 }
 
+private void handleFibonacci(Calculator calculator) {
+    System.out.println("Enter Fibonacci index: ");
+    int n = scanner.nextInt();
+    System.out.println("Fibonacci(" + n + ") = " + calculator.fibonacci(n));
+}
+
 
