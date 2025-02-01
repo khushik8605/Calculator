@@ -44,3 +44,25 @@ private void handleFibonacci(Calculator calculator) {
 }
 
 
+private void handleArrayOperations(int choice, Calculator calculator) {
+    System.out.println("Enter array size: ");
+    int size = scanner.nextInt();
+    double[] array = new double[size];
+    System.out.println("Enter elements: ");
+    for (int i = 0; i < size; i++) {
+        array[i] = scanner.nextDouble();
+    }
+    performArrayOperation(choice, array, calculator);
+}
+
+private void performArrayOperation(int choice, double[] array, Calculator calculator) {
+    switch (choice) {
+        case 6: System.out.println("Sum: " + calculator.sumArray(array)); break;
+        case 7: System.out.println("Mean: " + calculator.mean(array)); break;
+        case 8: System.out.println("Variance: " + calculator.variance(array)); break;
+        case 9: System.out.println("Standard Deviation: " + calculator.standardDeviation(array)); break;
+    }
+}
+
+
+
