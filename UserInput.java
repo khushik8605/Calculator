@@ -21,3 +21,20 @@ public void handleChoice(int choice, Calculator calculator) {
     }
 }
 
+private void handleBasicOperations(int choice, Calculator calculator) {
+    System.out.println("Enter two numbers: ");
+    double num1 = scanner.nextDouble();
+    double num2 = scanner.nextDouble();
+    performBasicOperation(choice, num1, num2, calculator);
+}
+
+private void performBasicOperation(int choice, double a, double b, Calculator calculator) {
+    switch (choice) {
+        case 1: System.out.println("Result: " + calculator.add(a, b)); break;
+        case 2: System.out.println("Result: " + calculator.subtract(a, b)); break;
+        case 3: System.out.println("Result: " + calculator.multiply(a, b)); break;
+        case 4: System.out.println("Result: " + calculator.divide(a, b)); break;
+    }
+}
+
+
